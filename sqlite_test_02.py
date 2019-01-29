@@ -1,3 +1,10 @@
+# Was zu lernen war:
+# sql-db öffen, Tabelle anlegen
+# aus einer globalen Liste von definierten SQL Befehlen
+# noch offen: 
+# aus der DB in numpy.dataframes einlesen
+# Eingaben aus einem Programm in eine sqlite DB committen
+# pragma-Einstellungen in einer def dbDesign(): einbauen	
 # https://stackabuse.com/a-sqlite-tutorial-with-python/ 
 # Nicht aus Workflow starten, da sqlite dann versucht, das db.file auf git anzulegen
 # falls nur im pythonista-Verzeichnis anlegbar: schade - aber ist dann so
@@ -12,7 +19,7 @@ def openDB():
 	con = sqlite3.connect("MkDev.db")
 
 
-def sqliteCMDs(): # Global - Lokal - Problem?
+def sqliteCMDs():
 	global lisqlcmd
 	lisqlcmd = [
 		"CREATE TABLE VUtab (id integer PRIMARY KEY, VUname text NOT NULL, Bemerkung text NOT NULL)", #0
